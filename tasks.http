@@ -1,0 +1,37 @@
+
+### REST client para visual studio code (rest api)
+@api =  http://localhost:3000/tasks
+
+### (al poner las almohadillas triples aparace el Send Request)
+
+### peticion GET (obtiene todas las tareas)
+GET {{api}}
+
+### peticion GET (obtiene una unica tarea)
+GET {{api}}/1
+
+### peticion GET count ( devuelve el conteo total de tareas en la tabla)
+
+Get {{api}}/count
+
+### petcion POST (crea una tarea)
+POST {{api}}
+Content-Type: application/json
+
+{
+  "title":"tarea 6",
+  "description":"descripcion 6"
+}
+
+### peticion DELETE (borra una unica tarea pasandole un :id)
+
+DELETE {{api}}/7
+
+### peticion PUT (actualiza o modifica una tarea pasandole un :id)
+PUT {{api}}/1
+Content-Type: application/json
+
+{
+  "title":"tarea 1 actualizada",
+  "description":"descripcion 1 actualizada"
+}
